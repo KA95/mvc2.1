@@ -2,6 +2,8 @@ package dao.implementation;
 
 import dao.IUserDao;
 import objects.User;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -9,6 +11,10 @@ import java.util.List;
  * Created by Sergio on 1/17/2015.
  */
 public class UserDao implements IUserDao {
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
     @Override
     public List<User> getAllUsers() {
         return null;
