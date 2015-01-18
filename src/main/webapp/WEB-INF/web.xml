@@ -11,8 +11,18 @@
         <load-on-startup>1</load-on-startup>
 	</servlet>
 
+	<servlet>
+		<servlet-name>myServlet</servlet-name>
+		<servlet-class>servlets.MyServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>myServlet</servlet-name>
+		<url-pattern>/servlet/*</url-pattern>
 	</servlet-mapping>
 </web-app>
